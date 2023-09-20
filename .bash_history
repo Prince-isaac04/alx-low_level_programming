@@ -1,20 +1,38 @@
 cd /root
-cd alx-low_level_programming/
-mkdir 0x0E-structures_typedef
-echo "structure type defe" > README.md
+cd printf/
 ls
-mv README.md 0x0E-structures_typedef/
+gcc *c test/main.c 
+vi _printf.c 
+gcc *c test/main.c 
+vi _printf.c 
+gcc *c test/main.c 
+vi _printf.c 
 ls
-cd 0x0E-structures_typedef/
+rm ._printf
 ls
-vi dog.h
+ls -a
+rm *swp
+rm *.swp
+rm *swp
+rm ._printf1.c.swp .main.h.swp 
 ls
-vi 1-init_dog.c
+ls -a
+rm .printf.c.swp 
+rm .*.swp
+ls -a
+gcc *c test/main.c 
+vi _printf.c 
+gcc *c test/main.c 
 ls
-vi 2-print_dog.c
+vi print_numbers.c 
+vi _printf.c 
+gcc *c test/main.c 
+vi print_numbers.c 
+gcc *c test/main.c 
+rm _printf.c 
 ls
-vi 4-new_dog.c
+gcc *c test/main.c 
+vi print_numbers.c 
+gcc *c test/main.c 
 ls
-vi 5-free_dog.c
-ls
-gacp
+./a.out 
