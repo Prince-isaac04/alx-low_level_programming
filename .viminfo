@@ -11,39 +11,43 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0/\s\+$
+~MSle0~/\s\+$
 
 # Last Substitute Search Pattern:
-~MSle0~&\s\+$
+~MSle0&\s\+$
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
 :wq!
-|2,0,1695174844,,"wq!"
-:%s/\s\+$//e
-|2,0,1695174603,,"%s/\\s\\+$//e"
+|2,0,1695346127,,"wq!"
 :set number
-|2,0,1695174363,,"set number"
-:q!
-|2,0,1695173463,,"q!"
+|2,0,1695345781,,"set number"
 :wq
-|2,0,1695173320,,"wq"
+|2,0,1695345145,,"wq"
+:wq1
+|2,0,1695344972,,"wq1"
+:q!
+|2,0,1695344797,,"q!"
+:set numbers
+|2,0,1695339100,,"set numbers"
+:%s/\s\+$//e
+|2,0,1695338975,,"%s/\\s\\+$//e"
+:set nimbeer
+|2,0,1695334684,,"set nimbeer"
+:wq! 
+|2,0,1695334459,,"wq! "
 :qa!
 |2,0,1695128601,,"qa!"
 :wq!\
 |2,0,1695124906,,"wq!\\"
 :@q!
 |2,0,1695124853,,"@q!"
-:set numbers
-|2,0,1695116958,,"set numbers"
 ::::::wq!
 |2,0,1694492666,,":::::wq!"
 :senumbers
 |2,0,1693864240,,"senumbers"
-:wq1
-|2,0,1693847728,,"wq1"
 :gg=G
 |2,0,1693542576,,"gg=G"
 :setnumber
@@ -115,7 +119,7 @@ $
 
 # Search String History (newest to oldest):
 ? \s\+$
-|2,1,1695174603,,"\\s\\+$"
+|2,1,1695338975,,"\\s\\+$"
 ? );
 |2,1,1695120694,,");"
 ? @$
@@ -148,268 +152,268 @@ $
 	
 	#endif
 |3,0,0,1,2,0,1695094495,"","#endif"
-"1	LINE	0
-	#endif
-|3,0,1,1,1,0,1695151976,"#endif"
+""1	LINE	0
+	int _printf(const char *format, ...) {
+|3,1,1,1,1,0,1695338947,"int _printf(const char *format, ...) {"
 "2	LINE	0
-	
-|3,0,2,1,1,0,1695151975,""
+		va_list set;
+|3,0,2,1,1,0,1695338946,"	va_list set;"
 "3	LINE	0
-	int _putchar(char c);
-|3,0,3,1,1,0,1695151975,"int _putchar(char c);"
+		va_start(set, format);
+|3,0,3,1,1,0,1695338945,"	va_start(set, format);"
 "4	LINE	0
-	int _printf(const char *format, ...);
-|3,0,4,1,1,0,1695151974,"int _printf(const char *format, ...);"
-"5	LINE	0
 	
-|3,0,5,1,1,0,1695151974,""
+|3,0,4,1,1,0,1695338944,""
+"5	LINE	0
+		int count = 0; // To keep track of the number of characters printed
+|3,0,5,1,1,0,1695338943,"	int count = 0; // To keep track of the number of characters printed"
 "6	LINE	0
-	#include <stddef.h>
-|3,0,6,1,1,0,1695151974,"#include <stddef.h>"
+	
+|3,0,6,1,1,0,1695338942,""
 "7	LINE	0
-	#include <stdlib.h>
-|3,0,7,1,1,0,1695151973,"#include <stdlib.h>"
+		while (*format) {
+|3,0,7,1,1,0,1695338941,"	while (*format) {"
 "8	LINE	0
-	#include <string.h>
-|3,0,8,1,1,0,1695151973,"#include <string.h>"
+			if (*format == '%') {
+|3,0,8,1,1,0,1695338941,"		if (*format == '%') {"
 "9	LINE	0
-	#include <unistd.h>
-|3,0,9,1,1,0,1695151973,"#include <unistd.h>"
-""-	CHAR	0
+				format++; // Move past the '%'
+|3,0,9,1,1,0,1695338936,"			format++; // Move past the '%'"
+"-	CHAR	0
 	t
-|3,1,36,0,1,0,1695173439,"t"
+|3,0,36,0,1,0,1695173439,"t"
 
 # File marks:
-'0  3  12  ~/printf/test/main.c
-|4,48,3,12,1695174844,"~/printf/test/main.c"
-'1  1  0  ~/printf/handle_print.c
-|4,49,1,0,1695174620,"~/printf/handle_print.c"
-'2  14  16  ~/printf/handle_print.c
-|4,50,14,16,1695174409,"~/printf/handle_print.c"
-'3  14  16  ~/printf/handle_print.c
-|4,51,14,16,1695174409,"~/printf/handle_print.c"
-'4  6  1  ~/printf/utils.c
-|4,52,6,1,1695174236,"~/printf/utils.c"
-'5  4  1  ~/printf/_printf.c
-|4,53,4,1,1695174027,"~/printf/_printf.c"
-'6  1  0  ~/printf/handle
-|4,54,1,0,1695173781,"~/printf/handle"
-'7  107  20  ~/printf/functions.c
-|4,55,107,20,1695173649,"~/printf/functions.c"
-'8  38  17  ~/printf/_printf.c
-|4,56,38,17,1695173510,"~/printf/_printf.c"
-'9  38  17  ~/printf/_printf.c
-|4,57,38,17,1695173510,"~/printf/_printf.c"
+'0  36  31  ~/printf/test/main.c
+|4,48,36,31,1695346127,"~/printf/test/main.c"
+'1  19  2  ~/printf/test/main.c
+|4,49,19,2,1695346031,"~/printf/test/main.c"
+'2  19  2  ~/printf/test/main.c
+|4,50,19,2,1695346031,"~/printf/test/main.c"
+'3  1  0  ~/printf/_printf.c
+|4,51,1,0,1695345846,"~/printf/_printf.c"
+'4  18  14  ~/printf/_printf.c
+|4,52,18,14,1695345525,"~/printf/_printf.c"
+'5  18  14  ~/printf/_printf.c
+|4,53,18,14,1695345525,"~/printf/_printf.c"
+'6  18  20  ~/printf/_printf.c
+|4,54,18,20,1695345434,"~/printf/_printf.c"
+'7  18  20  ~/printf/_printf.c
+|4,55,18,20,1695345434,"~/printf/_printf.c"
+'8  11  17  ~/printf/main.h
+|4,56,11,17,1695345307,"~/printf/main.h"
+'9  18  20  ~/printf/_printf.c
+|4,57,18,20,1695345156,"~/printf/_printf.c"
 
 # Jumplist (newest first):
+-'  36  31  ~/printf/test/main.c
+|4,39,36,31,1695346127,"~/printf/test/main.c"
+-'  19  2  ~/printf/test/main.c
+|4,39,19,2,1695346076,"~/printf/test/main.c"
+-'  19  2  ~/printf/test/main.c
+|4,39,19,2,1695346031,"~/printf/test/main.c"
 -'  3  12  ~/printf/test/main.c
-|4,39,3,12,1695174844,"~/printf/test/main.c"
--'  19  4  ~/printf/test/main.c
-|4,39,19,4,1695174823,"~/printf/test/main.c"
--'  1  0  ~/printf/handle_print.c
-|4,39,1,0,1695174620,"~/printf/handle_print.c"
--'  1  0  ~/printf/handle_print.c
-|4,39,1,0,1695174620,"~/printf/handle_print.c"
--'  48  0  ~/printf/handle_print.c
-|4,39,48,0,1695174610,"~/printf/handle_print.c"
--'  48  0  ~/printf/handle_print.c
-|4,39,48,0,1695174610,"~/printf/handle_print.c"
--'  14  16  ~/printf/handle_print.c
-|4,39,14,16,1695174409,"~/printf/handle_print.c"
--'  14  16  ~/printf/handle_print.c
-|4,39,14,16,1695174409,"~/printf/handle_print.c"
--'  14  16  ~/printf/handle_print.c
-|4,39,14,16,1695174409,"~/printf/handle_print.c"
--'  14  16  ~/printf/handle_print.c
-|4,39,14,16,1695174409,"~/printf/handle_print.c"
--'  12  17  ~/printf/handle_print.c
-|4,39,12,17,1695174354,"~/printf/handle_print.c"
--'  12  17  ~/printf/handle_print.c
-|4,39,12,17,1695174354,"~/printf/handle_print.c"
--'  12  17  ~/printf/handle_print.c
-|4,39,12,17,1695174354,"~/printf/handle_print.c"
--'  12  17  ~/printf/handle_print.c
-|4,39,12,17,1695174354,"~/printf/handle_print.c"
--'  6  1  ~/printf/utils.c
-|4,39,6,1,1695174236,"~/printf/utils.c"
--'  6  1  ~/printf/utils.c
-|4,39,6,1,1695174236,"~/printf/utils.c"
--'  6  1  ~/printf/utils.c
-|4,39,6,1,1695174236,"~/printf/utils.c"
--'  6  1  ~/printf/utils.c
-|4,39,6,1,1695174236,"~/printf/utils.c"
--'  6  1  ~/printf/utils.c
-|4,39,6,1,1695174236,"~/printf/utils.c"
--'  6  1  ~/printf/utils.c
-|4,39,6,1,1695174236,"~/printf/utils.c"
--'  6  1  ~/printf/utils.c
-|4,39,6,1,1695174236,"~/printf/utils.c"
--'  6  1  ~/printf/utils.c
-|4,39,6,1,1695174236,"~/printf/utils.c"
--'  1  0  ~/printf/utils.c
-|4,39,1,0,1695174205,"~/printf/utils.c"
--'  1  0  ~/printf/utils.c
-|4,39,1,0,1695174205,"~/printf/utils.c"
--'  1  0  ~/printf/utils.c
-|4,39,1,0,1695174205,"~/printf/utils.c"
--'  1  0  ~/printf/utils.c
-|4,39,1,0,1695174205,"~/printf/utils.c"
--'  1  0  ~/printf/utils.c
-|4,39,1,0,1695174205,"~/printf/utils.c"
--'  1  0  ~/printf/utils.c
-|4,39,1,0,1695174205,"~/printf/utils.c"
--'  1  0  ~/printf/utils.c
-|4,39,1,0,1695174205,"~/printf/utils.c"
--'  1  0  ~/printf/utils.c
-|4,39,1,0,1695174205,"~/printf/utils.c"
--'  74  0  ~/printf/utils.c
-|4,39,74,0,1695174204,"~/printf/utils.c"
--'  74  0  ~/printf/utils.c
-|4,39,74,0,1695174204,"~/printf/utils.c"
--'  74  0  ~/printf/utils.c
-|4,39,74,0,1695174204,"~/printf/utils.c"
--'  74  0  ~/printf/utils.c
-|4,39,74,0,1695174204,"~/printf/utils.c"
--'  74  0  ~/printf/utils.c
-|4,39,74,0,1695174204,"~/printf/utils.c"
--'  74  0  ~/printf/utils.c
-|4,39,74,0,1695174204,"~/printf/utils.c"
--'  74  0  ~/printf/utils.c
-|4,39,74,0,1695174204,"~/printf/utils.c"
--'  74  0  ~/printf/utils.c
-|4,39,74,0,1695174204,"~/printf/utils.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
--'  4  1  ~/printf/_printf.c
-|4,39,4,1,1695174027,"~/printf/_printf.c"
+|4,39,3,12,1695345911,"~/printf/test/main.c"
+-'  3  12  ~/printf/test/main.c
+|4,39,3,12,1695345911,"~/printf/test/main.c"
 -'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
+|4,39,1,0,1695345846,"~/printf/_printf.c"
 -'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
+|4,39,1,0,1695345846,"~/printf/_printf.c"
 -'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
+|4,39,1,0,1695345846,"~/printf/_printf.c"
 -'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
--'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
--'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
--'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
--'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
--'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
--'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
--'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
--'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
--'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
--'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
--'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
--'  1  0  ~/printf/_printf.c
-|4,39,1,0,1695174004,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  56  0  ~/printf/_printf.c
-|4,39,56,0,1695174003,"~/printf/_printf.c"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
--'  1  0  ~/printf/handle
-|4,39,1,0,1695173781,"~/printf/handle"
+|4,39,1,0,1695345846,"~/printf/_printf.c"
+-'  32  5  ~/printf/_printf.c
+|4,39,32,5,1695345828,"~/printf/_printf.c"
+-'  32  5  ~/printf/_printf.c
+|4,39,32,5,1695345828,"~/printf/_printf.c"
+-'  32  5  ~/printf/_printf.c
+|4,39,32,5,1695345828,"~/printf/_printf.c"
+-'  32  5  ~/printf/_printf.c
+|4,39,32,5,1695345828,"~/printf/_printf.c"
+-'  18  14  ~/printf/_printf.c
+|4,39,18,14,1695345772,"~/printf/_printf.c"
+-'  18  14  ~/printf/_printf.c
+|4,39,18,14,1695345772,"~/printf/_printf.c"
+-'  18  14  ~/printf/_printf.c
+|4,39,18,14,1695345772,"~/printf/_printf.c"
+-'  18  14  ~/printf/_printf.c
+|4,39,18,14,1695345772,"~/printf/_printf.c"
+-'  18  14  ~/printf/_printf.c
+|4,39,18,14,1695345525,"~/printf/_printf.c"
+-'  18  14  ~/printf/_printf.c
+|4,39,18,14,1695345525,"~/printf/_printf.c"
+-'  18  14  ~/printf/_printf.c
+|4,39,18,14,1695345525,"~/printf/_printf.c"
+-'  18  14  ~/printf/_printf.c
+|4,39,18,14,1695345525,"~/printf/_printf.c"
+-'  18  20  ~/printf/_printf.c
+|4,39,18,20,1695345434,"~/printf/_printf.c"
+-'  18  20  ~/printf/_printf.c
+|4,39,18,20,1695345434,"~/printf/_printf.c"
+-'  18  20  ~/printf/_printf.c
+|4,39,18,20,1695345434,"~/printf/_printf.c"
+-'  18  20  ~/printf/_printf.c
+|4,39,18,20,1695345434,"~/printf/_printf.c"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  11  17  ~/printf/main.h
+|4,39,11,17,1695345307,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  9  0  ~/printf/main.h
+|4,39,9,0,1695345286,"~/printf/main.h"
+-'  18  20  ~/printf/_printf.c
+|4,39,18,20,1695345156,"~/printf/_printf.c"
+-'  18  20  ~/printf/_printf.c
+|4,39,18,20,1695345156,"~/printf/_printf.c"
+-'  18  20  ~/printf/_printf.c
+|4,39,18,20,1695345156,"~/printf/_printf.c"
+-'  18  20  ~/printf/_printf.c
+|4,39,18,20,1695345156,"~/printf/_printf.c"
+-'  18  20  ~/printf/_printf.c
+|4,39,18,20,1695345156,"~/printf/_printf.c"
+-'  18  20  ~/printf/_printf.c
+|4,39,18,20,1695345156,"~/printf/_printf.c"
+-'  18  20  ~/printf/_printf.c
+|4,39,18,20,1695345156,"~/printf/_printf.c"
+-'  18  20  ~/printf/_printf.c
+|4,39,18,20,1695345156,"~/printf/_printf.c"
+-'  53  0  ~/printf/_printf.c
+|4,39,53,0,1695345044,"~/printf/_printf.c"
+-'  53  0  ~/printf/_printf.c
+|4,39,53,0,1695345044,"~/printf/_printf.c"
+-'  53  0  ~/printf/_printf.c
+|4,39,53,0,1695345044,"~/printf/_printf.c"
 
 # History of marks within files (newest to oldest):
 
 > ~/printf/test/main.c
-	*	1695174840	0
-	"	3	12
-	^	3	13
-	.	3	12
+	*	1695346123	0
+	"	36	31
+	^	36	32
+	.	36	32
 	+	1	36
 	+	1	17
 	+	1	0
@@ -450,6 +454,196 @@ $
 	+	15	16
 	+	19	4
 	+	3	12
+	+	44	0
+	+	12	3
+	+	30	53
+	+	35	3
+	+	36	34
+	+	42	28
+	+	39	3
+	+	3	12
+	+	15	13
+	+	19	2
+	+	17	2
+	+	19	1
+	+	39	1
+	+	36	32
+
+> ~/printf/_printf.c
+	*	1695345831	0
+	"	1	0
+	^	32	6
+	.	32	0
+	+	10	21
+	+	6	34
+	+	5	34
+	+	10	21
+	+	6	38
+	+	8	0
+	+	13	1
+	+	15	1
+	+	6	41
+	+	15	16
+	+	15	1
+	+	6	34
+	+	13	1
+	+	15	14
+	+	7	10
+	+	15	0
+	+	43	25
+	+	55	8
+	+	55	0
+	+	43	18
+	+	55	0
+	+	6	0
+	+	17	29
+	+	13	19
+	+	18	1
+	+	17	0
+	+	18	1
+	+	1	17
+	+	6	38
+	+	12	12
+	+	8	16
+	+	9	0
+	+	11	0
+	+	14	0
+	+	16	0
+	+	19	30
+	+	21	0
+	+	22	13
+	+	27	0
+	+	31	0
+	+	36	0
+	+	37	0
+	+	40	0
+	+	55	0
+	+	17	0
+	+	6	35
+	+	6	33
+	+	19	13
+	+	23	0
+	+	37	17
+	+	18	16
+	+	6	35
+	+	28	19
+	+	37	15
+	+	18	14
+	+	6	40
+	+	7	0
+	+	4	14
+	+	18	6
+	+	37	17
+	+	18	15
+	+	32	0
+	+	31	0
+	+	32	0
+	b	6	34
+	d	43	26
+
+> ~/printf/main.h
+	*	1695345303	0
+	"	11	17
+	^	11	18
+	.	11	18
+	+	1	1
+	+	1	0
+	+	1	14
+	+	1	5
+	+	1	20
+	+	1	7
+	+	1	17
+	+	1	18
+	+	1	19
+	+	1	18
+	+	1	38
+	+	1	0
+	+	1	5
+	+	1	19
+	+	1	16
+	+	1	18
+	+	1	11
+	+	1	0
+	+	1	36
+	+	1	14
+	+	75	55
+	+	46	27
+	+	47	18
+	+	48	28
+	+	51	18
+	+	53	24
+	+	55	28
+	+	63	10
+	+	61	7
+	+	59	14
+	+	57	16
+	+	65	13
+	+	52	30
+	+	102	18
+	+	86	8
+	+	96	2
+	+	44	14
+	+	77	6
+	+	101	29
+	+	100	25
+	+	59	14
+	+	61	21
+	+	68	24
+	+	71	17
+	+	77	12
+	+	68	23
+	+	61	21
+	+	59	14
+	+	32	7
+	+	102	18
+	+	24	0
+	+	1	14
+	+	2	14
+	+	13	5
+	+	6	18
+	+	7	19
+	+	8	19
+	+	9	0
+	+	11	18
+
+> ~/printf/_putchar.c
+	*	1695340903	0
+	"	10	25
+	^	6	3
+	.	6	2
+	+	1	18
+	+	12	20
+	+	14	0
+	+	10	0
+	+	14	0
+	+	15	0
+	+	14	13
+	+	13	1
+	+	14	20
+	+	12	15
+	+	14	14
+	+	12	17
+	+	14	20
+	+	15	0
+	+	14	7
+	+	1	17
+	+	14	18
+	+	11	0
+	+	7	0
+	+	1	18
+	+	5	20
+	+	6	2
+
+> ~/printf/_putchar
+	*	1695335600	0
+	"	82	3
+	^	48	1
+	.	30	0
+	+	95	0
+	+	1	17
+	+	48	0
+	+	3	0
+	+	30	0
 
 > ~/printf/handle_print.c
 	*	1695174612	0
@@ -473,36 +667,6 @@ $
 	+	74	0
 	+	3	0
 
-> ~/printf/_printf.c
-	*	1695174021	0
-	"	4	1
-	^	56	1
-	.	4	0
-	+	9	21
-	+	6	11
-	+	3	34
-	+	9	21
-	+	6	15
-	+	8	0
-	+	11	1
-	+	12	1
-	+	6	18
-	+	12	16
-	+	12	1
-	+	6	11
-	+	11	1
-	+	12	14
-	+	7	10
-	+	12	0
-	+	38	25
-	+	52	8
-	+	53	0
-	+	38	18
-	+	56	0
-	+	4	0
-	b	52	6
-	d	38	26
-
 > ~/printf/handle
 	*	1695173775	0
 	"	1	0
@@ -517,63 +681,6 @@ $
 	^	107	21
 	.	120	23
 	+	120	23
-
-> ~/printf/main.h
-	*	1695173320	0
-	"	1	0
-	^	96	19
-	.	18	0
-	+	1	1
-	+	1	0
-	+	1	14
-	+	1	5
-	+	1	20
-	+	1	7
-	+	1	17
-	+	1	18
-	+	1	19
-	+	1	18
-	+	1	38
-	+	1	0
-	+	1	5
-	+	1	19
-	+	1	16
-	+	1	18
-	+	1	11
-	+	1	0
-	+	1	36
-	+	1	14
-	+	69	55
-	+	40	27
-	+	41	18
-	+	42	28
-	+	45	18
-	+	47	24
-	+	49	28
-	+	57	10
-	+	55	7
-	+	53	14
-	+	51	16
-	+	59	13
-	+	46	30
-	+	96	18
-	+	80	8
-	+	90	2
-	+	38	14
-	+	71	6
-	+	95	29
-	+	94	25
-	+	53	14
-	+	55	21
-	+	62	24
-	+	65	17
-	+	71	12
-	+	62	23
-	+	55	21
-	+	53	14
-	+	26	7
-	+	96	18
-	+	18	0
 
 > ~/printf/utilis.c
 	*	1695173106	0
@@ -820,29 +927,6 @@ $
 > ~/printf/test/_putchar.c
 	*	1695121354	0
 	"	1	0
-
-> ~/printf/_putchar.c
-	*	1695119519	0
-	"	7	25
-	^	7	26
-	.	7	18
-	+	1	18
-	+	5	20
-	+	7	0
-	+	3	0
-	+	7	0
-	+	8	0
-	+	7	13
-	+	6	1
-	+	7	20
-	+	5	15
-	+	7	14
-	+	5	17
-	+	7	20
-	+	8	0
-	+	7	7
-	+	1	17
-	+	7	18
 
 > ~/printf/handle.c
 	*	1695086612	0
@@ -1559,14 +1643,3 @@ $
 	^	13	1
 	.	13	0
 	+	13	0
-
-> ~/alx-low_level_programming/0x06-pointers_arrays_strings/main.h
-	*	1693844810	0
-	"	11	0
-	^	11	0
-	.	10	25
-	+	2	13
-	+	1	12
-	+	12	5
-	+	7	32
-	+	10	25
