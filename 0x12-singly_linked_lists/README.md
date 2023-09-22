@@ -1,1 +1,1 @@
-linked list
+ singy linked list
