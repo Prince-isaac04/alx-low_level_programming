@@ -1,0 +1,1 @@
+statuic library in c
