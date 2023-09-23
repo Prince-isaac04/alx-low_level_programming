@@ -1,1 +1,1 @@
- singy linked list
+readne
