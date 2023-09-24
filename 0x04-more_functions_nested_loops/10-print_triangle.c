@@ -1,29 +1,31 @@
 #include "main.h"
-
 /**
- * _isupper - check for lowercase character
- * @c:The character to be checked
- * Return: 1 for uppercase character or 0 for anything else
+ * print_triangle - prints a triangle, followed by a new line
+ * @size: size of the triangle
  */
 void print_triangle(int size)
 {
-	int hgh, base;
-
 	if (size <= 0)
+	{
 		_putchar('\n');
+	}
 	else
 	{
-		for (hgh = 1; hgh <= size; hgh++)
+		int i, j;
+
+		for (i = 1; i <= size; i++)
 		{
-			for (base = 1; base <= size; base++)
+			for (j = i; j < size; j++)
 			{
-				if (hgh + base) <= size)
-					_putchar (' ');
-				else
-					_putchar('#');
+				_putchar(' ');
 			}
-		_putchar('\n')
+
+			for (j = 1; j <= i; j++)
+			{
+				_putchar('#');
+			}
+
+			_putchar('\n');
 		}
 	}
 }
-
